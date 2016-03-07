@@ -24,7 +24,7 @@ import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class JobsDriver implements Driver {
+public abstract class JobsDriver implements Driver {
     private Driver driver;
     public JobsDriver(Driver driver) {
         this.driver = driver;
