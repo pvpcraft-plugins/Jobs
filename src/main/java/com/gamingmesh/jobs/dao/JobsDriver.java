@@ -24,7 +24,7 @@ import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public abstract class JobsDriver implements Driver {
+public class JobsDriver implements Driver {
     private Driver driver;
     public JobsDriver(Driver driver) {
         this.driver = driver;
@@ -59,4 +59,10 @@ public abstract class JobsDriver implements Driver {
     public boolean jdbcCompliant() {
         return driver.jdbcCompliant();
     }
+    
+    @Override
+	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
